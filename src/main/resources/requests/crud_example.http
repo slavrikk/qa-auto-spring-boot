@@ -6,7 +6,8 @@ POST http://localhost:8080/user
 Content-Type: application/json
 
 {
-  "name": "Sam",
+  "firstName": "Sam",
+  "secondName": "Barber",
   "age": 22
 }
 
@@ -15,7 +16,8 @@ PUT http://localhost:8080/user/3
 Content-Type: application/json
 
 {
-  "name": "Karl",
+  "firstName": "Karl",
+  "secondName": "Black",
   "age": 50
 }
 

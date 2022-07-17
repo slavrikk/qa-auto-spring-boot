@@ -1,15 +1,16 @@
 package ru.geekbrains.auto.qa.autoqa.lesson2.controller.rest.example.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter
+@Setter
 public class User {
 
     private int id;
-    private String name;
+    private String firstName;
+    private String secondName;
     private int age;
 }

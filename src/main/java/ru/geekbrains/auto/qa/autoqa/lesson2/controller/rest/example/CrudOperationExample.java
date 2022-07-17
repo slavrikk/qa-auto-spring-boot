@@ -17,9 +17,9 @@ public class CrudOperationExample {
 
     @PostConstruct
     void init() {
-        data.put(1, new User(1, "Jack", 18));
-        data.put(2, new User(2, "Alex", 30));
-        data.put(3, new User(3, "Phil", 25));
+        data.put(1, new User(1, "Jack","Wolf", 18));
+        data.put(2, new User(2, "Alex","Adamson", 30));
+        data.put(3, new User(3, "Phil","Ball", 25));
     }
 
     @GetMapping("/{id}")
@@ -43,7 +43,8 @@ public class CrudOperationExample {
     public void change(@PathVariable int id, @RequestBody User userChanging) {
         User user = data.get(id);
         user.setAge(userChanging.getAge());
-        user.setName(userChanging.getName());
+        user.setFirstName(userChanging.getFirstName());
+        user.setSecondName(userChanging.getSecondName());
         data.put(id, user);
     }
 
