@@ -1,4 +1,4 @@
-package ru.geekbrains.auto.qa.autoqa.petstore.user;
+package ru.geekbrains.auto.qa.autoqa.lesson5.petstore.user;
 
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
@@ -13,7 +13,7 @@ import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import ru.geekbrains.auto.qa.autoqa.lesson5.restassured.petstore.EndPoints;
 import ru.geekbrains.auto.qa.autoqa.lesson5.restassured.petstore.dto.PetStoreUserDto;
-import ru.geekbrains.auto.qa.autoqa.petstore.config.PetStoreTestConfig;
+import ru.geekbrains.auto.qa.autoqa.lesson5.petstore.config.PetStoreTestConfig;
 
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = PetStoreTestConfig.class)

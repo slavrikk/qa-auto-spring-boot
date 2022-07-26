@@ -1,4 +1,4 @@
-package ru.geekbrains.auto.qa.autoqa.petstore.config;
+package ru.geekbrains.auto.qa.autoqa.lesson5.petstore.config;
 
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.ComponentScan;

@@ -1,4 +1,4 @@
-package ru.geekbrains.auto.qa.autoqa.mock;
+package ru.geekbrains.auto.qa.autoqa.lesson5.mock;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.assertj.core.api.Assertions;

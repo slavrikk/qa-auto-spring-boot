@@ -1,4 +1,4 @@
-package ru.geekbrains.auto.qa.autoqa.user.integration;
+package ru.geekbrains.auto.qa.autoqa.lesson4.user.integration;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.assertj.core.api.Assertions;

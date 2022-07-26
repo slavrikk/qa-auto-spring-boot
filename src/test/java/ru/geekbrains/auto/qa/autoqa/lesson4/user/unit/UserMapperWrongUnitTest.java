@@ -1,15 +1,20 @@
-package ru.geekbrains.auto.qa.autoqa.user.unit;
+package ru.geekbrains.auto.qa.autoqa.lesson4.user.unit;
 
 import org.assertj.core.api.SoftAssertions;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.annotation.DirtiesContext;
 import ru.geekbrains.auto.qa.autoqa.lesson2.controller.rest.example.dto.User;
 import ru.geekbrains.auto.qa.autoqa.lesson4.entity.UserEntity;
 import ru.geekbrains.auto.qa.autoqa.lesson4.mapper.UserMapper;
-import ru.geekbrains.auto.qa.autoqa.lesson4.mapper.UserMapperImpl;
 
-public class UserMapperUnitTest {
+@SpringBootTest
+@DirtiesContext(classMode = DirtiesContext.ClassMode.BEFORE_EACH_TEST_METHOD)
+public class UserMapperWrongUnitTest {
 
-    UserMapper userMapper = new UserMapperImpl();
+    @Autowired
+    private UserMapper userMapper;
 
     @Test
     void convertEntityToDtoTest() {

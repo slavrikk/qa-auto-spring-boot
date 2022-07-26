@@ -1,4 +1,4 @@
-package ru.geekbrains.auto.qa.autoqa.mock;
+package ru.geekbrains.auto.qa.autoqa.lesson5.mock;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -7,9 +7,6 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.Spy;
 import org.mockito.junit.jupiter.MockitoExtension;
-import ru.geekbrains.auto.qa.autoqa.lesson5.mock.AuditService;
-import ru.geekbrains.auto.qa.autoqa.lesson5.mock.ResponseResult;
-import ru.geekbrains.auto.qa.autoqa.lesson5.mock.RestService;
 
 import static org.mockito.Mockito.atLeastOnce;
 import static org.mockito.Mockito.verify;
