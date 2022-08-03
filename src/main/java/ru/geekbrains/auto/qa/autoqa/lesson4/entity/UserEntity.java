@@ -23,4 +23,8 @@ public class UserEntity {
 
     @Column(name = "age")
     private Integer age;
+
+    @ManyToOne
+    @JoinColumn(name = "adrress_id")
+    private AddressEntity addressEntity;
 }
