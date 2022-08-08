@@ -29,7 +29,7 @@ public class UserRepositoryTest {
         userEntity.setFirstName("Alex");
         userEntity.setSecondName("Brown");
 
-        testEntityManager.persistAndFlush(userEntity);
+        userRepository.saveAndFlush(userEntity);
 
         List<UserEntity> userEntityList = userRepository.findAll();
 
