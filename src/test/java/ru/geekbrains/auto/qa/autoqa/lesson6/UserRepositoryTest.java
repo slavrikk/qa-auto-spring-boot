@@ -2,6 +2,7 @@ package ru.geekbrains.auto.qa.autoqa.lesson6;
 
 import org.assertj.core.api.Assertions;
 import org.assertj.core.api.SoftAssertions;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
@@ -130,5 +131,11 @@ public class UserRepositoryTest {
             s.assertThat(entity.get().getSecondName()).isEqualTo("Brown");
             s.assertThat(entity.get().getAge()).isEqualTo(25);
         });
+    }
+
+    @Test
+    @Disabled
+    void getUserByFirstNameAndSecondNameTest() {
+
     }
 }
