@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -23,7 +24,7 @@ public class GeekBrainsMainPage {
     @FindBy(xpath = "//div[@class='mn-search-panel__input-wrap']//input")
     private WebElement input;
 
-    public GeekBrainsMainPage(WebDriver driver, SearchResultPage searchResultPage) {
+    public GeekBrainsMainPage(@Lazy WebDriver driver, SearchResultPage searchResultPage) {
         this.searchResultPage = searchResultPage;
         this.driver = driver;
         PageFactory.initElements(driver, this);

@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -16,7 +17,7 @@ public class JavaQaAutomationProfessionPage {
     @FindBy(xpath = "//div[@class='form_offer']/p")
     private List<WebElement> formOffer;
 
-    public JavaQaAutomationProfessionPage(WebDriver driver) {
+    public JavaQaAutomationProfessionPage(@Lazy WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }

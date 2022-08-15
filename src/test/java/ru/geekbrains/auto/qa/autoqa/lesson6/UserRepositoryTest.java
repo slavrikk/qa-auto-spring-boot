@@ -82,32 +82,6 @@ public class UserRepositoryTest {
     }
 
     @Test
-    public void findUserByName() {
-        UserEntity userEntity1 = new UserEntity();
-        userEntity1.setAge(25);
-        userEntity1.setFirstName("Alex");
-        userEntity1.setSecondName("Brown");
-
-        UserEntity userEntity2 = new UserEntity();
-        userEntity2.setAge(30);
-        userEntity2.setFirstName("Sam");
-        userEntity2.setSecondName("Fisher");
-
-        testEntityManager.persistAndFlush(userEntity1);
-        testEntityManager.persistAndFlush(userEntity2);
-
-        Optional<UserEntity> entity = userRepository.findByFirstNameAndSecondName("Sam", "Fisher");
-
-        Assertions.assertThat(entity.isPresent()).isTrue();
-
-        SoftAssertions.assertSoftly(s -> {
-            s.assertThat(entity.get().getFirstName()).isEqualTo("Sam");
-            s.assertThat(entity.get().getSecondName()).isEqualTo("Fisher");
-            s.assertThat(entity.get().getAge()).isEqualTo(30);
-        });
-    }
-
-    @Test
     public void findUserByCity() {
 
         UserEntity userEntity = new UserEntity();
