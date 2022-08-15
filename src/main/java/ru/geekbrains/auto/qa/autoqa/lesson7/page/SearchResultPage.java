@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 import ru.geekbrains.auto.qa.autoqa.lesson7.util.Pause;
 
@@ -30,7 +31,7 @@ public class SearchResultPage {
     @FindBy(xpath = "//div[@class='container']/div[@class='row']/div[@class='profession-item-wrapper search_row col-md-6 col-xs-12 col-lg-4']//div[@class='profession-title']")
     private List<WebElement> professionTitles;
 
-    public SearchResultPage(WebDriver driver) {
+    public SearchResultPage(@Lazy WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
