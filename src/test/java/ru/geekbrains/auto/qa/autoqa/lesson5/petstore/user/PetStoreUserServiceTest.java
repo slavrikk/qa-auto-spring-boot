@@ -107,6 +107,17 @@ public class PetStoreUserServiceTest {
     @Disabled
     void updateUserTest() {
         //TODO Implement update user test
+          .body(UserDTO)
+                .post(EndPoints.USER.getUrl())
+                .then()
+                .statusCode(HttpStatus.OK.value())
+                .assertThat(userFromService)
+                .body(userDto)
+                .exctract()
+                .response()
+                .body()
+                .path("id");
+        
     }
 
 }
